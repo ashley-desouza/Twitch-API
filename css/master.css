@@ -1,0 +1,108 @@
+body {
+  width: 100%;
+  background-color: rgba(192, 192, 192, 1);
+}
+
+#bigWrapper {
+  max-width: 1000px;
+  border: 1px solid #000000;
+  margin: 20px auto;
+  text-align: left;
+}
+
+#searchContainer {
+  padding: 40px 20px 20px 20px;
+  background-color: rgba(173, 216, 230, 1);
+}
+
+#searchBox {
+  padding: 5px;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+}
+
+#searchBtn {
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  padding: 7px 15px;
+  border: 0;
+  cursor: pointer;
+  border: 1px solid #000000;
+}
+
+#searchMessage {
+  padding: 5px;
+}
+
+.errorMessageStyle {
+  color: rgba(255, 0, 0, 1);
+  font-size: 14px;
+}
+
+#streamPagination {
+    float: right;
+    font-size: 14px;
+}
+
+#prev, #next {
+  display:inline-block;
+  cursor: pointer;
+}
+
+#streams {
+  border-top: 1px solid #000000;
+  padding: 0 20px;
+  text-align: left;
+}
+
+#streamTotal {
+  font-size: 14px;
+}
+
+#streamDisplay {
+    width: 75%;
+}
+
+#streamDisplay ul {
+  list-style: none;
+  padding: 0;
+}
+
+#streamDisplay li {
+  padding: 10px 0;
+}
+
+#streamDisplay h2 {
+  margin-top: 2px;
+  border-bottom: 1px solid #DDDDDD;
+}
+
+#streamDisplay img {
+  float: left;
+  width: 150px;
+  height: 120px;
+  margin-right: 10px;
+  padding: 2px;
+}
+
+#streamDisplay li a {
+  text-decoration: none;
+  color: #000000;
+}
+
+#streamDisplay li a:hover {
+  text-decoration: none;
+  color: rgba(255, 251, 204, 0.7);
+}
+
+.strongStyle {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.headerStyle {
+  font-size: 18px;
+  font-style: italic;
+}

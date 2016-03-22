@@ -30,7 +30,7 @@ var keyPressed =  function (event) {
 var getPrevList = function () {
   if (offset) {
     offset -= 10; // Decrease offset by 10
-    resultCount.textContent = (offset + 1) + '/' + (offset + 10);
+    resultCount.textContent = (offset + 1) + ' - ' + (offset + 10);
     makeRequest();
   } else {
     return false;
@@ -40,7 +40,7 @@ var getPrevList = function () {
 // Next list of streams for pagination
 var getNextList = function () {
   offset += 10; // Increase offset by 10
-  resultCount.textContent = (offset + 1) + '/' + (offset + 10);
+  resultCount.textContent = (offset + 1) + ' - ' + (offset + 10);
   makeRequest();
 };
 
@@ -69,13 +69,15 @@ var buildELements = function (data, index) {
   gameName.className = 'headerStyle';
 
   // Add styling to the viewers element
-  viewers.textContent = ' - ' + data.streams[index].viewers + ' viewers';
+  viewers.textContent = ' - ' + data.streams[index].viewers;
+  viewers.textContent += data.streams[index].viewers === 1? ' viewer' : ' viewers';
   viewers.className = 'strongStyle';
 
   desc.textContent = data.streams[index].channel.status;
 
   // Add styling to the views element
-  views.textContent = data.streams[index].channel.views + ' views';
+  views.textContent = data.streams[index].channel.views;
+  views.textContent += data.streams[index].channel.views === 1? ' view' : ' views';
   views.className = 'strongStyle';
 
   // Append each child element to its appropriate parent element
@@ -126,7 +128,7 @@ var makeRequest = function () {
             // 3. The Total, 4. 'Next' list for pagination,
           streamCount.textContent = 'Total Results: ' + data._total;
           prev.textContent = '\u25C4';
-          resultCount.textContent = (offset + 1) + '/' + (offset + 10);
+          resultCount.textContent = (offset + 1) + ' - ' + (offset + 10);
           next.textContent = '\u25BA';
 
           var numOfStreams = data.streams.length;
